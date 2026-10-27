@@ -1,0 +1,117 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Verdana, "DejaVu Sans", Arial, sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+  padding: clamp(6px, 2vw, 20px);
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(4px, 1vw, 10px);
+  max-width: 1000px;
+  margin: 0 auto clamp(8px, 2vw, 16px);
+}
+.menu a {
+  padding: clamp(4px, 1vw, 8px) clamp(7px, 1.6vw, 16px);
+  border: 1.5px solid #1f2937;
+  border-radius: 8px;
+  color: #1f2937;
+  font-size: clamp(9px, 1.6vw, 13px);
+  font-weight: bold;
+  text-decoration: none;
+}
+.menu a:hover { background: #1557b0; border-color: #1557b0; color: #ffffff; }
+
+/* ===== 3 KOLOM (selalu berdampingan) ===== */
+.halaman {
+  display: grid;
+  grid-template-columns: 278fr 343fr 287fr;
+  gap: clamp(5px, 1.9vw, 19px);
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.kartu {
+  min-width: 0;
+  border: 2px solid #1f2937;
+  border-radius: clamp(6px, 1.2vw, 12px);
+  padding: clamp(6px, 1.8vw, 20px);
+  min-height: clamp(200px, 41vw, 410px);
+  background: #ffffff;
+}
+
+.kartu h2 {
+  font-size: clamp(8px, 1.8vw, 18px);
+  font-weight: bold;
+  padding-bottom: clamp(3px, 0.8vw, 8px);
+  margin-bottom: clamp(6px, 1.8vw, 18px);
+  border-bottom: clamp(2px, 0.3vw, 3px) solid #2a6099;
+}
+
+/* ===== TUTORIAL W3SCHOOLS ===== */
+.kotak {
+  display: block;
+  border: 1.5px solid #1f2937;
+  border-radius: clamp(3px, 0.6vw, 6px);
+  padding: clamp(6px, 1.5vw, 15px) clamp(4px, 1.6vw, 16px);
+  margin-bottom: clamp(6px, 1.8vw, 18px);
+  font-size: clamp(7px, 1.5vw, 15px);
+  color: #1f2937;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.kotak:hover { background: #e8eef8; }
+
+/* ===== FILM POPULER ===== */
+.film-list { display: flex; gap: clamp(3px, 1vw, 10px); }
+.film {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #4b5563;
+  font-size: clamp(5px, 1vw, 10px);
+}
+.poster {
+  aspect-ratio: 95 / 145;
+  border: 2px solid #1f2937;
+  border-radius: 4px;
+  margin-bottom: clamp(3px, 0.8vw, 8px);
+  background-color: #b8bfd0;
+  background-image:
+    linear-gradient(to top right, transparent calc(50% - 1px), #5b6475 50%, transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), #5b6475 50%, transparent calc(50% + 1px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(4px, 1.1vw, 11px);
+  font-weight: bold;
+  color: #374151;
+}
+.film:hover .poster { border-color: #1557b0; }
+
+/* ===== CLAUDE AI ===== */
+.chat {
+  border: 1.5px solid #1f2937;
+  border-radius: clamp(3px, 0.6vw, 6px);
+  padding: clamp(5px, 1.4vw, 14px) clamp(4px, 1vw, 10px);
+  margin-bottom: clamp(6px, 1.8vw, 18px);
+  font-size: clamp(6px, 1.1vw, 11px);
+}
+.tombol {
+  display: block;
+  text-align: center;
+  background: #1557b0;
+  color: #ffffff;
+  padding: clamp(6px, 1.4vw, 14px) 4px;
+  border-radius: clamp(3px, 0.6vw, 6px);
+  font-size: clamp(7px, 1.4vw, 14px);
+  font-weight: bold;
+  text-decoration: none;
+}
+.tombol:hover { background: #0f4590; }
